@@ -143,10 +143,10 @@ const addDepartment = async() => {
 // add a role
 const addRole = async() => {
   const data = await inquirer.prompt(addRoleQuestions)
-  const sql = `INSERT INTO role (id, title, salary, department_id)
-  VALUES (?), (?), (?), (?)`;
-    
-    db.query(sql, [data.id], [data.title], [data.salary], [data.department_id] ,(err, rows) => {
+  const sql = `INSERT INTO role (title, salary, department_id) VALUES (?,?,?)`;
+    console.log(data);
+
+    db.query(sql, [data.title, data.salary, data.department_id] ,(err, rows) => {
       if (err) {
         console.log(err);
          return;
@@ -160,10 +160,9 @@ const addRole = async() => {
 // add an employee
 const addEmployee = async() => {
   const data = await inquirer.prompt(addEmpQuestions)
-  const sql = `INSERT INTO role (id, first_name, last_name, role_id, manager_id)
-  VALUES (?), (?), (?), (?), (?)`;
+  const sql = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?,?,?,?)`;
     
-    db.query(sql, [data.id], [data.first_name], [data.last_name], [data.role_id] , [data.manager_id] ,(err, rows) => {
+    db.query(sql, [data.first_name, data.last_name, data.role_id, data.manager_id] ,(err, rows) => {
       if (err) {
         console.log(err);
          return;
@@ -174,12 +173,14 @@ const addEmployee = async() => {
     });
   }
 
+//update an employee role
+  //add query to pull employee list
+
 
 // function to initialize app
 // if statements to specify what was chosen by user input
 async function init() {
  const data = await inquirer.prompt(userInput) 
-  console.log(data)
   //determines user choice
 if (data.initialPrompt === "view all departments"){
     viewAllDepartments()
@@ -199,6 +200,15 @@ if (data.initialPrompt === "view all departments"){
   return
 }
 };
+
+//TODO:
+  //select an employee to update their roll
+  //seed db with starting data- specifically for employee roles
+
+//query for all employees
+//use list as choices array
+//{NAME: THIS_EMPLOYEE, VALUE: THISEMPLOYEEID}
+//map function to loop through array- for each element in array output obj to match name and value
 
 // Function call to initialize app
 init();
