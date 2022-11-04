@@ -18,6 +18,15 @@ This is a tool designed to create a database of departments, roles, and employee
 4. Type "node index.js" into the command line
 5. Follow the prompted questions to create your database of employees.
 
+## Future Implementation
+
+With more time I plan to:
+  - Complete the functionality to update the role of an employee
+  - Update employee managers
+  - View employees by manager
+  - View employees by department
+  - Delete departments, roles, and employees
+
 ![Screenshot](./Assets/Screenshot.png)
 
 ## Credits

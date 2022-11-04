@@ -3,20 +3,17 @@ USE employee_tracker_db;
 INSERT INTO department (name)
 VALUES ("Discs");
 
-
 INSERT INTO role (title, salary, department_id)
-VALUES ("Manager", "70000.00", "0089"),
-      ("Supervisor", "60000.00", "0089"),
-      ("Disc Specialist", "50000.00", "0089");
-
-
+VALUES ("Manager", 70000, 1),
+      ("Supervisor", 60000, 1),
+      ("Disc Specialist", 50000, 1);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-values ("Chloe", "Jade", "7890", "7890"),
-        ("Trayden", "Thomas", "1234", "7890"),
-        ("Emry", "Lynn", "5678", "7890"),
-        ("Zoey", "Marie", "5678", "7890"),
-        ("Navy", "Ann", "5678", "7890");
+values ("Chloe", "Jade", 1, NULL),
+        ("Trayden", "Thomas", 2, 1),
+        ("Emry", "Lynn", 3, 1),
+        ("Zoey", "Marie", 3, 1),
+        ("Navy", "Ann", 3, 1);
 
 
 

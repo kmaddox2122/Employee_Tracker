@@ -175,8 +175,12 @@ const addEmployee = async() => {
 
 //update an employee role
   //add query to pull employee list
+    //select an employee to update their roll
+    //use list as choices array
+    //{NAME: THIS_EMPLOYEE, VALUE: THISEMPLOYEEID}
+    //map function to loop through array- for each element in array output obj to match name and value
 
-
+    
 // function to initialize app
 // if statements to specify what was chosen by user input
 async function init() {
@@ -200,15 +204,6 @@ if (data.initialPrompt === "view all departments"){
   return
 }
 };
-
-//TODO:
-  //select an employee to update their roll
-  //seed db with starting data- specifically for employee roles
-
-//query for all employees
-//use list as choices array
-//{NAME: THIS_EMPLOYEE, VALUE: THISEMPLOYEEID}
-//map function to loop through array- for each element in array output obj to match name and value
 
 // Function call to initialize app
 init();
