@@ -42,7 +42,9 @@ With more time I plan to:
 Walkthrough video: https://www.awesomescreenshot.com/video/12217119?key=38b57f1ac8ae52abf296a9c43db361b1
 
 Screenshot:
+<p>
 <img src="Assets/Screenshot.png" width="45%">
+</p>
 
 ## Credits
 
